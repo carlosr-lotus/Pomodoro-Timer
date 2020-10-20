@@ -27,4 +27,4 @@
 
 - The website has a Dark Mode enabled based on the user's system hour. If the system hour is between 18h and 6h, the main background will be darker.
 
-- O website possui Modo Noturno baseado na hora do sistema do usuário. Quando a hora estiver entre 18h and 6h, a principal cor de fundo ficará escura.
+- O website possui Modo Noturno baseado na hora do sistema do usuário. Quando a hora do sistema estiver entre 18h and 6h, a principal cor de fundo ficará escura.
