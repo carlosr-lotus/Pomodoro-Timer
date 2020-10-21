@@ -6,7 +6,7 @@ let pageTitle = document.querySelector('title');
 
 let audioSound = new Audio('../sound/end-sound.mp3');
 
-let minutes = 0;
+let minutes = 24;
 let seconds = 59;
 let interval = -1;
 
