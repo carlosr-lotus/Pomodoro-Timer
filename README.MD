@@ -1,6 +1,6 @@
 # Pomodoro Timer
 
- - Website link: https://confident-goldberg-07a50f.netlify.app
+ - Website link: https://distracted-kirch-595171.netlify.app
 
 ## About project
 
@@ -34,6 +34,6 @@
 
 ## Update 23/10/2020
 
-- Fixes timer getting slower when user leaves the website.
+- Fixes timer getting slower when user is in another browser tab.
 
 - Now the tab title displays both minutes and seconds remaining.
