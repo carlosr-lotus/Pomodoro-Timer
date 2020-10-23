@@ -30,3 +30,10 @@
 - The website has a Dark Mode enabled based on the user's system hour. If the system hour is between 18h and 6h, the main background will be darker.
 
 - O website possui Modo Noturno baseado na hora do sistema do usuário. Quando a hora do sistema estiver entre 18h and 6h, a principal cor de fundo ficará escura.
+
+
+## Update 23/10/2020
+
+- Fixes timer getting slower when user leaves the website.
+
+- Now the tab title displays both minutes and seconds remaining.

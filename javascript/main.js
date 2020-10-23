@@ -4,6 +4,8 @@ let timer = document.querySelector('.time');
 let msg = document.querySelector('.msg');
 let pageTitle = document.querySelector('title');
 
+let timerSpeed = 1000;
+
 let audioSound = new Audio('../sound/end-sound.mp3');
 
 let minutes = 24;
@@ -13,12 +15,15 @@ let interval = -1;
 btnTimer.addEventListener('click', function() {
     if (interval == -1) {
         interval = setInterval(function() {
+
             // Pomodoro timer active
             timer.innerHTML = minutes + ':' + seconds;
             btnTimer.innerText = `Stop`;
 
-            // Display pomodoro time left in page TITLE
-            pageTitle.innerText = `( ${minutes}m ) | Pomodoro`;
+            // Adjust timer speed due to browser limitations // When the user is in another tab, the browser slow down the timer speed, the code below fixes this problem.
+            if (document.hidden === true) {
+                timerSpeed = 1000;
+            }
 
             // Add an zero when seconds is under 10 = 21:09
             if (seconds < 10) {
@@ -34,6 +39,9 @@ btnTimer.addEventListener('click', function() {
                     timer.innerHTML = minutes + ':' + seconds;
                 }
             }
+
+            // Display pomodoro time left in page TITLE
+            pageTitle.innerText = `( ${minutes}:${seconds} ) | Pomodoro`;
 
             if (minutes < 0) {
                 // End pomodoro timer
@@ -52,7 +60,7 @@ btnTimer.addEventListener('click', function() {
             }
 
             seconds--;
-        }, 1000);
+        }, timerSpeed);
 
     } else {
         // Pause Pomodoro Timer
@@ -60,4 +68,4 @@ btnTimer.addEventListener('click', function() {
         clearInterval(interval);
         interval = -1;
     }
-})
+});
